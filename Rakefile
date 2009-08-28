@@ -12,7 +12,7 @@ begin
     gem.authors = ["David Dollar"]
     gem.add_development_dependency "rspec"
     gem.add_development_dependency "yard"
-    # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
+    gem.add_dependency 'rake', '>= 1.0'
   end
   Jeweler::GemcutterTasks.new
 rescue LoadError

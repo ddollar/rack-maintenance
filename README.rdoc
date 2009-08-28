@@ -1,6 +1,11 @@
 = rack-maintenance
 
-Description goes here.
+Rack::Maintenance is a simple Rack middleware to detect the existence of a
+maintenance.html page and display that instead of incoming requests.
+
+== Installation
+
+ sudo gem install rack-maintenance
 
 == Note on Patches/Pull Requests
  

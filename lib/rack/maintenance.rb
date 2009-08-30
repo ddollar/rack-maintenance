@@ -14,7 +14,7 @@ class Rack::Maintenance
   def call(env)
     if maintenance?
       data = File.read(file)
-      [ 503, { 'Content-Type' => 'text/html', 'Content-Length' => data.length }, [data] ]
+      [ 503, { 'Content-Type' => 'text/html', 'Content-Length' => data.length.to_s }, [data] ]
     else
       app.call(env)
     end

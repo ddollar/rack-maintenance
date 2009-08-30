@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{rack-maintenance}
-  s.version = "0.0.0"
+  s.version = "0.1.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["David Dollar"]
-  s.date = %q{2009-08-28}
+  s.date = %q{2009-08-30}
   s.description = %q{TODO: longer description of your gem}
   s.email = %q{<ddollar@gmail.com>}
   s.extra_rdoc_files = [
@@ -24,6 +24,7 @@ Gem::Specification.new do |s|
      "Rakefile",
      "VERSION",
      "lib/rack/maintenance.rb",
+     "rack-maintenance.gemspec",
      "spec/rack-maintenance_spec.rb",
      "spec/spec_helper.rb"
   ]

@@ -6,7 +6,7 @@ begin
   Jeweler::Tasks.new do |gem|
     gem.name = "rack-maintenance"
     gem.summary = %Q{Detect and show a maintenance page}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.description = gem.summary
     gem.email = "<ddollar@gmail.com>"
     gem.homepage = "http://github.com/ddollar/rack-maintenance"
     gem.authors = ["David Dollar"]

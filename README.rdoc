@@ -14,12 +14,12 @@ maintenance.html page and display that instead of incoming requests.
    :file => Rails.root.join('public', 'maintenance.html'),
    :env  => 'MAINTENANCE'
 
-The <tt>:env</tt> is optional. If specified, all requests will be shown the
-maintenance page if the environment variable is set. If <tt>:env</tt> is not
-specified, the maintenance page will be shown if it exists.
+<tt>:env</tt> is optional. If specified, all requests will be shown the
+maintenance page if the environment variable is set.
+If <tt>:env</tt> is not specified, the maintenance page will be shown if it exists.
 
 == Note on Patches/Pull Requests
- 
+
 * Fork the project.
 * Make your feature addition or bug fix.
 * Add tests for it. This is important so I don't break it in a

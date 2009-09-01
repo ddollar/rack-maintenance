@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{rack-maintenance}
-  s.version = "0.2.0"
+  s.version = "0.3.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["David Dollar"]
-  s.date = %q{2009-08-30}
+  s.date = %q{2009-08-31}
   s.description = %q{Detect and show a maintenance page}
   s.email = %q{<ddollar@gmail.com>}
   s.extra_rdoc_files = [
@@ -45,15 +45,15 @@ Gem::Specification.new do |s|
     if Gem::Version.new(Gem::RubyGemsVersion) >= Gem::Version.new('1.2.0') then
       s.add_development_dependency(%q<rspec>, [">= 0"])
       s.add_development_dependency(%q<yard>, [">= 0"])
-      s.add_runtime_dependency(%q<rake>, [">= 1.0"])
+      s.add_runtime_dependency(%q<rack>, [">= 1.0"])
     else
       s.add_dependency(%q<rspec>, [">= 0"])
       s.add_dependency(%q<yard>, [">= 0"])
-      s.add_dependency(%q<rake>, [">= 1.0"])
+      s.add_dependency(%q<rack>, [">= 1.0"])
     end
   else
     s.add_dependency(%q<rspec>, [">= 0"])
     s.add_dependency(%q<yard>, [">= 0"])
-    s.add_dependency(%q<rake>, [">= 1.0"])
+    s.add_dependency(%q<rack>, [">= 1.0"])
   end
 end

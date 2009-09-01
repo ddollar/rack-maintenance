@@ -12,7 +12,7 @@ begin
     gem.authors = ["David Dollar"]
     gem.add_development_dependency "rspec"
     gem.add_development_dependency "yard"
-    gem.add_dependency 'rake', '>= 1.0'
+    gem.add_dependency 'rack', '>= 1.0'
   end
   Jeweler::GemcutterTasks.new
 rescue LoadError

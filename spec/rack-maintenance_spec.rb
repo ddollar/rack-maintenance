@@ -25,5 +25,9 @@ describe "RackMaintenance" do
       app.should_not_receive :call
       rack.call({})
     end
+
+    it "returns the maintenance response" do
+      rack.call({}).should eq [503, {"Content-Type"=>"text/html", "Content-Length"=>"0"}, [""]]
+    end
   end
 end

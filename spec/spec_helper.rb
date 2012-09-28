@@ -1,9 +1,10 @@
-$LOAD_PATH.unshift(File.dirname(__FILE__))
-$LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
-require 'rack-maintenance'
-require 'spec'
-require 'spec/autorun'
+require 'rubygems'
+require 'bundler/setup'
 
-Spec::Runner.configure do |config|
-  
+require 'rack/maintenance'
+
+Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each {|f| require f}
+
+RSpec.configure do |config|
+  # some optional config here
 end

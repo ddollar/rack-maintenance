@@ -7,6 +7,14 @@ maintenance.html page and display that instead of incoming requests.
 
  sudo gem install rack-maintenance
 
+== Installation with Bundler
+
+In Gemfile:
+
+ gem 'rack-maintenance'
+
+and then run `bundle`.
+
 == Usage
 
  # config/environment.rb

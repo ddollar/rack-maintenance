@@ -29,5 +29,12 @@ describe "RackMaintenance" do
     it "returns the maintenance response" do
       rack.call({}).should eq [503, {"Content-Type"=>"text/html", "Content-Length"=>"0"}, [""]]
     end
+
+    context "and request to /assets" do
+      it "calls the app" do
+        app.should_receive(:call).once
+        rack.call({"PATH_INFO"=>"/assets/application.css"})
+      end
+    end
   end
 end

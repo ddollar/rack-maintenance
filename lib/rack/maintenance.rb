@@ -12,7 +12,7 @@ class Rack::Maintenance
   end
 
   def call(env)
-    if maintenance?
+    if maintenance? && path_in_app(env)
       data = File.read(file)
       [ 503, { 'Content-Type' => 'text/html', 'Content-Length' => data.length.to_s }, [data] ]
     else
@@ -32,6 +32,10 @@ private ######################################################################
 
   def maintenance?
     environment ? ENV[environment] : File.exists?(file)
+  end
+
+  def path_in_app(env)
+    env["PATH_INFO"] !~ /^\/assets/
   end
 
 end

@@ -1,7 +1,29 @@
 require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
+require 'fileutils'
 
 describe "RackMaintenance" do
-  it "fails" do
-    fail "hey buddy, you should probably rename this file and start specing for real"
+  let(:app) { Class.new { def call(env); end }.new }
+  let(:rack) { Rack::Maintenance.new(app, :file => "spec/maintenance.html") }
+
+  context "without maintenance file" do
+    it "calls the app" do
+      app.should_receive(:call).once
+      rack.call({})
+    end
+  end
+
+  context "with maintenance file" do
+    before do
+      FileUtils.touch 'spec/maintenance.html'
+    end
+
+    after do
+      FileUtils.rm 'spec/maintenance.html'
+    end
+
+    it "does not call the app" do
+      app.should_not_receive :call
+      rack.call({})
+    end
   end
 end
